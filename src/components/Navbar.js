@@ -18,7 +18,11 @@ const Navbar = () => {
     width: undefined,
     height: undefined,
   })
-  const [openSearchBar, setOpenSearchBar] = useState(false)
+  const [isActive, setActive] = useState(false)
+
+  const changeClassStyle = () => {
+    setActive(!isActive)
+  }
 
   const handleResize = () => {
     setSize({
@@ -93,7 +97,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link to='/'>
-                  <BiSearch onClick={() => setOpenSearchBar(!openSearchBar)} />
+                  <BiSearch onClick={changeClassStyle} />
                 </Link>
               </li>
               <li>
@@ -105,7 +109,9 @@ const Navbar = () => {
           </div>
         </div>
       </header>
-      {openSearchBar ? <SearchBar /> : null}
+      <div className={isActive ? 'search__visible' : 'search__trasparent'}>
+        <SearchBar />
+      </div>
     </React.Fragment>
   )
 }
