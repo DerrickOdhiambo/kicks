@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive&family=Fredoka:wght@500&family=Poppins:wght@400;700&family=Rokkitt&family=Sen:wght@400;800&display=swap');
+
+$Poppins: 'Poppins', sans-serif;
+$Rokkit: 'Rokkitt', serif;
+$Sen: 'Sen', sans-serif;
+$Cutive: 'Cutive', serif;
+$Fredoka: 'Fredoka', sans-serif;
+
+//colors
+$dark: black;
+$light: #fff;
+$primary: #ff6c00;
+$secondary: #ffba00;
+
+//spacing
+$spacing-md: 16px;
+$spacing-lg: 32px;
+
+//border radius
+$borderRadius: 12px;
+
+//header height
+$headerHeight: 70px;
+
+//mixins
+@mixin breakpoint($point) {
+  @if $point== md {
+    //768px
+    @media (min-width: 48em) {
+      @content;
+    }
+  }
+}
