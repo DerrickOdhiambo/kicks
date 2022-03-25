@@ -66,6 +66,7 @@ const Navbar = () => {
             className={`${classes.header__content__nav} ${
               navbarOpen ? classes.isMenu : ''
             }`}
+            id='menu'
           >
             <ul>
               <li>

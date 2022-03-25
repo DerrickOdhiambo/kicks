@@ -1,0 +1,62 @@
+@import '../styles/variables.scss';
+
+.landing__page {
+  position: relative;
+  height: 100vh;
+  top: -10%;
+  background-color: grey;
+
+  .upper__nav {
+    position: sticky;
+  }
+
+  .call__to__action {
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    top: 30%;
+    text-align: center;
+
+    @include breakpoint(md) {
+      text-align: unset;
+    }
+
+    h1 {
+      text-transform: capitalize;
+      font-size: 2.4rem;
+      color: $light;
+
+      @include breakpoint(sm) {
+        font-size: 3rem;
+      }
+
+      @include breakpoint(md) {
+        font-size: 3.8rem;
+      }
+    }
+    p {
+      font-size: 1.3rem;
+      padding: 0.2rem 0.2rem;
+      font-family: $Fredoka;
+
+      @include breakpoint(sm) {
+        font-size: 1.5rem;
+      }
+
+      @include breakpoint(md) {
+        font-size: 1.8rem;
+      }
+    }
+    .cta {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1.5rem;
+
+      @include breakpoint(md) {
+        justify-content: flex-start;
+        margin-left: 3rem;
+      }
+    }
+  }
+}
