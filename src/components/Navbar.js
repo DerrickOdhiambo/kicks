@@ -3,6 +3,8 @@ import classes from './Navbar.module.scss'
 
 import { Link } from 'react-router-dom'
 
+import { motion } from 'framer-motion'
+
 //icons import
 import { BiMenuAltLeft } from 'react-icons/bi'
 import { BiSearch } from 'react-icons/bi'
@@ -60,7 +62,13 @@ const Navbar = () => {
             )}
           </div>
           <div className={classes.header__content__logo}>
-            <h3>F.Footware</h3>
+            <motion.h3
+              initial={{ y: -200 }}
+              animate={{ y: 0 }}
+              transition={{ delay: 0.2, type: 'spring', stiffness: 150 }}
+            >
+              F.Footware
+            </motion.h3>
           </div>
           <div
             className={`${classes.header__content__nav} ${

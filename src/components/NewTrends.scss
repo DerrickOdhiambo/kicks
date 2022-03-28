@@ -1,0 +1,108 @@
+@import '../styles/variables.scss';
+
+.new__trends {
+  margin: 2rem 0;
+
+  @include breakpoint(md) {
+    height: 110vh;
+  }
+  height: 100%;
+  h3 {
+    text-transform: uppercase;
+    color: $dull;
+    letter-spacing: $letterSpace;
+    text-align: center;
+    margin: 2rem 0;
+  }
+  .container {
+    display: grid;
+    height: 100%;
+    grid-gap: 2rem;
+
+    @include breakpoint(md) {
+      grid-template-columns: 3fr 4fr;
+      height: 90vh;
+    }
+
+    .get__noticed__section {
+      // border: 1px solid black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h5 {
+        letter-spacing: $letterSpace;
+        text-transform: uppercase;
+      }
+      img {
+        object-fit: cover;
+        height: 25rem;
+        width: 100%;
+        padding: 0 1rem;
+
+        @include breakpoint(md) {
+          object-fit: cover;
+          height: 27rem;
+          width: 21rem;
+        }
+      }
+
+      p {
+        line-height: 5;
+        text-transform: capitalize;
+
+        @include breakpoint(md) {
+          letter-spacing: $letterSpace;
+        }
+      }
+    }
+    .get__noticed__section__2 {
+      // border: 1px solid red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        object-fit: cover;
+        height: 30rem;
+        width: 100%;
+        @include breakpoint(md) {
+          object-fit: cover;
+          height: 40rem;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.trendy__images__carousel {
+  cursor: grab;
+  overflow: hidden;
+
+  .inner__carousel {
+    display: flex;
+    .item {
+      height: 14rem;
+      min-width: 23rem;
+      padding: 0.5rem;
+      object-fit: cover;
+      margin-bottom: 2rem;
+      text-align: center;
+
+      @include breakpoint(md) {
+        height: 14rem;
+        min-width: 21rem;
+        padding: 0.5rem;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+        pointer-events: none;
+      }
+
+      p {
+        letter-spacing: $letterSpace;
+      }
+    }
+  }
+}
