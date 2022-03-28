@@ -7,6 +7,7 @@ import 'react-js-stickynav/dist/index.css'
 
 import { BrowserRouter as Router } from 'react-router-dom'
 import LandingPage from './components/LandingPage'
+import NewTrends from './components/NewTrends'
 
 function App() {
   const style = () => {
@@ -36,6 +37,7 @@ function App() {
           <Navbar />
         </StickyNav>
         <LandingPage />
+        <NewTrends />
       </div>
     </Router>
   )
